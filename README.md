@@ -6,6 +6,8 @@ Inoltre, ho incluso anche un file `.pdf` già compilato, per chiunque volesse so
 ### Come contribuire?
 Usate uno dei due file che contengono il codice del documento e, dopo aver apportato le modifiche, inviatemi una pull request: la accetterò solo dopo aver controllato (verosimilmente entro il weekend successivo alla vostra richiesta);
 se avete solo qualche suggerimento, scrivete un thread su questo progetto, vi risponderò al più presto e se necessario apporterò modifiche sempre entro il weekend successivo alla vostra richiesta.
+- Per modificare il documento principale ho usato l'editor Lyx ma va bene qualsiasi IDE per LaTeX
+- Per modificare e creare le illustrazioni ho usato [TikzEdd](http://tikzedt.org/), ma andrà benissimo qualsiasi software vi permetta di esportare immagini in formato `SVG` 
 ### Fanno schifo questi appunti?
 Per il momento si tratta di un documento di puro testo, senza illustrazioni (alcune già presenti comunque nella cartella `Illustrazioni`); ecco un elenco di funzionalità presenti e future:
 - [x] Indice generale interattivo
