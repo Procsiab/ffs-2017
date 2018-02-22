@@ -1,0 +1,22 @@
+\begin{tikzpicture} [scale=1.5]
+% Origine
+	\coordinate (O) at (0,1.8);
+% Vincolo
+	\fill [pattern = north east lines] (-0.2, 2) rectangle (0.2, 1.8);
+	\draw[thick] (-0.2, 1.8) -- (0.2, 1.8);
+% Massa
+	\filldraw (0.5, 0.6) circle (1pt)
+		coordinate (m);
+% Fune
+	\draw (O) -- (m);
+% Riposo
+	\draw [color=gray, dashed] (O) -- (0, 0.4);
+% Theta
+	\filldraw[fill=gray!20!white,draw=black] (O) -- ++(0, -0.3)
+		arc [start angle=-90, end angle=-69, radius=3mm]
+		node [left=2pt] {$\scriptscriptstyle \theta$};
+% Gravita'
+	\draw [->] (m) -- ++(0, -0.3) node [below right=-4pt] {$\scriptstyle m\vec{g}$};
+% Tensione
+	\draw [->] (m) -- ++(0, 0.3) node [above right=-4pt] {$\scriptscriptstyle\vec{T}\cos\left(\theta\right)$};
+\end{tikzpicture}

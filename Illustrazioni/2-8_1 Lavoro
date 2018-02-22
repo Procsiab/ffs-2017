@@ -1,0 +1,38 @@
+\begin{tikzpicture} [scale=1.5]
+% Assi
+	\draw [gray, dashed] [->] (0, -0.5) -- (0, 2)
+		node [black, right] {$y(t)$};
+	\draw [gray, dashed] [->] (-0.5, 0) -- (2, 0)
+		node [black, right] {$x(t)$};
+% Ascissa curvilinea
+	\draw (0.5, 1.5) parabola (1.8, 0.5)
+		coordinate (s);
+% Punto O
+	\filldraw (0, 0) circle (1pt)
+		node [below left] {$\scriptstyle O$}
+		coordinate (O);
+% Punto P1
+	\filldraw (60:1.67) circle (1pt)
+		node [above right=-2pt] {$\scriptstyle P_1$}
+		coordinate (P1);
+% Punto P2
+	\filldraw (30:1.76) circle (1pt)
+		node [black, above right=-2pt] {$\scriptstyle P_2$}
+		coordinate (P2);
+% Raggio vettore 1
+	\draw [->] (O) -- (P1)
+		node [black, midway, left=-2pt] {$\scriptstyle \vec r (t_1)$}
+		coordinate (r1);
+% Raggio vettore 2
+	\draw [->] (O) -- (P2)
+		node [near start, right=8pt] {$\scriptstyle \vec r (t_2)$}
+		coordinate (r2);
+% delta r
+	\draw [->] (P1) -- (P2)
+		node [near start, below=2pt] {$\scriptstyle d \vec r$}
+		coordinate (r);
+% d theta
+	\filldraw [fill=gray!40!white, draw=gray] (0,0) -- (30:3mm)
+		arc [start angle=30, end angle=60, radius=3mm] -- cycle
+		node [black, above right=7pt] {$\scriptstyle d\theta$};
+\end{tikzpicture}

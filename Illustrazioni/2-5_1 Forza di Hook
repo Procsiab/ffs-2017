@@ -1,0 +1,26 @@
+\begin{tikzpicture} [scale=1.5]
+% Acsissa
+	\draw [gray, dashed] [->] (-1, 0) -- (1, 0)
+		node [black, right] {$x(t)$};
+% Vincolo
+	\fill [pattern = north west lines] (-1.2,-0.2) rectangle (-1, 1);
+	\draw[thick] (-1,-0.2) -- (-1,1);
+% Riposo
+	\draw [thick] (0, 0.05) -- (0, -0.05)
+		node [below=-2pt] {$\scriptstyle x_0$}
+		coordinate (x0);
+% Estensione
+	\draw [thick] (0.6, 0.05) -- (0.6, -0.05)
+		node [below=-2pt] {$\scriptstyle x_1$}
+		coordinate (x1);
+% Molla
+	\draw [decoration={aspect=0.3, segment length=3mm, amplitude=3mm,coil}, decorate]
+		(-1, 0.5) -- ($(x1) + (0, 0.5)$); 
+% Massa
+	\filldraw ($(x1) + (0, 0.5)$)  circle [radius=2.5pt] node [above=1pt] {$\scriptstyle m$} coordinate (m);
+% Forza di Hook
+	\draw [black] [->] (m) -- ++(0.4, 0) node [above=-1pt, very near end] {$\scriptstyle \vec F_H$};
+% Delta X
+	\draw [<->] ($(x0) + (0, 0.8)$) -- ($(x1) + (0, 0.8)$)
+		node [above, midway] {$\scriptstyle \Delta x$};
+\end{tikzpicture}

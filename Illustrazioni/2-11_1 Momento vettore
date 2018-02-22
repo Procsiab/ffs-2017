@@ -1,0 +1,33 @@
+\begin{tikzpicture} [scale=1.5]
+% Punto O
+	\filldraw (0, 0) circle (1pt)
+		node [below left] {$\scriptstyle O$}
+		coordinate (O);
+% Punto P1
+	\filldraw (60:1.67) circle (1pt)
+		node [below=2pt] {$\scriptstyle P$}
+		coordinate (P1);
+% Punto P2
+	\filldraw (30:1.76)
+		coordinate (P2);
+% Raggio vettore (braccio)
+	\draw [->] (O) -- (P1)
+		node [black, midway, left] {$\scriptstyle \vec r$}
+		coordinate (r1);
+	\draw [gray, densely dashed] (P1) -- ++(60:0.5);
+% Velocita'
+	\draw [->] (P1) -- (P2)
+		node [near end, below=2pt] {$\scriptstyle \vec w$}
+		coordinate (r);
+	\draw [gray, densely dashed] (P1) -- ++(142:0.5);
+% Angolo
+	\filldraw [fill=gray!40!white, draw=gray] (P1) -- ++(-39:2mm)
+		arc [start angle=-39, end angle=60, radius=2mm] -- cycle;
+	\draw (P1) node [right=8pt] {$\scriptstyle d\theta$};
+% Momento
+	\draw [->] (O) -- ++(120:1)
+		node [midway, left] {$\scriptstyle \vec w$}
+		coordinate (M);
+% Angolo retto
+	\draw [thick] (O) --++(120:1mm) -- ++(60:1mm) -- ++(-60:1mm) -- ++(-120:1mm) -- cycle;
+\end{tikzpicture}

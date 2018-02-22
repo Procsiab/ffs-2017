@@ -1,0 +1,14 @@
+\begin{tikzpicture} [scale=1.1]
+	\draw [->] (-0.5, 0) -- (1.5, 0)
+		node [below right=-9pt] {$\scriptstyle x$};
+	\draw [->] (0, -0.5) -- (0, 1)
+		node [right] {$\scriptstyle y$};
+	\draw [gray, densely dotted] (30:1) -- +(-90:0.5);
+	\draw [gray, densely dotted] (30:1) -- (0, 0.5);
+	\draw [thick] [->] (0, 0) -- ++(30:1)
+		node [midway, above] {$\vec{b}$};
+	\draw [decorate, decoration={brace, amplitude=3pt}] (0, 0) -- (0, 0.5)
+		node [midway, left] {$\scriptstyle b_y$};
+	\draw [decorate, decoration={brace, amplitude=3pt}] (30:1) +(-90:0.5) -- (0, 0)
+		node [midway, below, black] {$\scriptstyle b_x$};
+\end{tikzpicture}

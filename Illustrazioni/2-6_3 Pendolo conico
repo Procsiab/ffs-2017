@@ -1,0 +1,18 @@
+\begin{tikzpicture} [scale=1.5]
+% Traiettoria
+	\draw [gray, densely dashed] (0, 0) circle [radius=1];
+% Massa
+	\filldraw (90:1) circle [radius=1pt] node [above right=-2pt] {$m$} coordinate (m);
+% Fune
+	\coordinate (O) at (0,0);
+	\draw (O) -- (m);
+	\draw [decorate, decoration={brace, amplitude=6pt}] (m) -- (O)
+		node [midway, right=3pt] {$L$};
+% Vincolo
+	\draw (O) circle [radius=3pt];
+	\fill [pattern = north east lines] (O) circle [radius=3pt];
+% Forze
+	\draw [->] [thick] (m) -- ++(0, 0.5) node [near end, left] {$\scriptscriptstyle\vec{T}\cos\left(\theta\right)$};
+	\draw [->] [black] (m) -- ++(-0.3, 0) node [near end, left, black] {$\scriptstyle\vec a_\tau$};
+	\draw [->] [thick] (m) -- ++(0, -0.5) node [very near end, left, black] {$\scriptstyle m\vec a_{cp}$};
+\end{tikzpicture} 

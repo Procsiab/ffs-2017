@@ -1,0 +1,10 @@
+\begin{tikzpicture} [scale=1.1]
+	\draw [->] (0, 0) -- (2, 0)
+		node [midway, below] {$\vec{a}$};
+	\draw [->] (0, 0) -- (30:1)
+		node [midway, above] {$\vec{b}$};
+	\draw [very thin, gray] (30:1) -- ++(2, 0);
+	\draw [very thin, gray] (2, 0) -- ++(30:1);
+	\draw [<-] (30:1) ++(2, 0) -- (0, 0) 
+		node [near start, above=-2pt] {$\vec{c}$};
+\end{tikzpicture}

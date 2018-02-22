@@ -1,0 +1,10 @@
+\begin{tikzpicture} [scale=1.5]
+	\draw (0, 0) circle [radius=1];
+	\filldraw (0, 0) circle [radius=1pt] node [below=2pt] {O} coordinate (O);
+	\filldraw (45:1) circle [radius=1pt] node [right] {$x_1$} coordinate (x1);
+	\draw [->] [gray, densely dashed] (O) -- (x1) node [midway, below, black] {$\scriptstyle \vec r$};
+	\filldraw (90:1) circle [radius=1pt] node [above right=-2pt] {$x_2$} coordinate (x2);
+	\draw [->] (x1) -- (x2) node [midway, below] {$\scriptstyle ds$};
+	\draw [->] [thick] (x2) -- ++(-0.5, 0) node [near end, above, black] {$\vec a_\tau$};
+	\draw [->] [thick] (x2) -- ++(0, -0.5) node [near end, left, black] {$\vec a_n$};
+\end{tikzpicture}

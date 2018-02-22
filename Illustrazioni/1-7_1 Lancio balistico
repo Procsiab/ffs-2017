@@ -1,0 +1,33 @@
+\begin{tikzpicture} [scale=1.5]
+\coordinate (Ym) at (0, 1);
+% Assi
+	\draw [gray, dashed] [->] (0, -0.5) -- (0, 2)
+		node [black, right] {$y$};
+	\draw [gray, dashed] [->] (-0.5, 0) -- (2, 0)
+		node [black, right] {$x$};
+% Accelerazione di gravita'
+	\draw [->] (1.5, 1.5) -- ++(0, -0.2) node [left=-1pt, midway] {$\vec g$};
+% Origine
+	\filldraw (0, 0) circle (1pt)
+		node [below left] {$\scriptstyle O$}
+		coordinate (O);
+% Gittata
+	\draw [thick] (1.8, 0.05) -- ++(0, -0.1)
+		node [below] {$\scriptstyle G$}
+		coordinate (G);
+% Traiettoria
+	\draw let \p{Ym}=(Ym), \p{G}=(G), \p{O}=(O) in
+	 (O) parabola bend (\x{G}*0.5, \y{Ym}) (\x{G}, \y{O}) coordinate (par);
+% Velocita' iniziale
+	\draw [<-] [thick] (0.2, 0.5) -- (0, 0 |- par) node [above, very near start] {$\scriptstyle \vec v_0$} coordinate (v);
+% Punto medio
+	\draw let \p{G}=(G) in [black, thick] (\x{G}*0.5, 0.05) -- ++(0, -0.1)
+		node [black, below] {$\scriptstyle x_m$}
+		coordinate (Xm);
+	\draw let \p{Ym}=(Ym) in [black, thick] (-0.05, \y{Ym}) -- ++(0.1, 0)
+		node [black, left=2pt] {$\scriptstyle y_m$};
+% Angolo
+	\filldraw [fill=gray!40!white, draw=gray] (0,0) -- (1.5mm, 0)
+		arc [start angle=0, end angle=64, radius=1.5mm] -- cycle
+		node [black, above right=2pt] {$\scriptstyle \alpha$};
+\end{tikzpicture}

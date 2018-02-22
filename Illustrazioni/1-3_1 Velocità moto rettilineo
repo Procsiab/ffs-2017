@@ -1,0 +1,25 @@
+\begin{tikzpicture} [scale=1.5]
+% Asse del tempo
+	\draw [gray, dashed] [->] (-1, 0) -- (2, 0)
+		node [black, right] {$t$};
+	\filldraw (0, 0) circle (1pt)
+		node [below=1pt] {$\scriptstyle t_1$}
+		coordinate (t1);
+	\filldraw (1, 0) circle (1pt)
+		node [below=1pt] {$\scriptstyle t_2$}
+		coordinate (t2);
+	\draw (t1) -- (t2) node [midway, below] {$\Delta t$};
+% Asse dello spazio
+	\draw [gray, dashed] [->] (-0.5, -0.5) -- (-0.5, 2)
+		node [black, right] {$x(t)$};
+	\filldraw (-0.5, 0.5) circle (1pt)
+		node [left] {$\scriptstyle x_1$}
+		coordinate (x1);
+	\filldraw (-0.5, 1) circle (1pt)
+		node [left] {$\scriptstyle x_2$}
+		coordinate (x2);
+	\draw (x1) -- (x2) node [midway, left] {$\Delta x$};
+% Velocita'  media
+	\draw [thick] (x1) ++(0.5, 0) -- (1, 1)
+		node [black, midway, above=3pt] {$v_{m}$};
+\end{tikzpicture}

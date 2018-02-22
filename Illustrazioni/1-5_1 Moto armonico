@@ -1,0 +1,22 @@
+\begin{tikzpicture} [scale=1.5]
+	\draw [gray, dashed] [->] (-1, 0) -- (1, 0)
+		node [black, right] {$x(t)$};
+% Origine
+	\draw [thick] (0, 0.05) -- (0, -0.05)
+		node [below=-2pt] {$\scriptstyle \sin \phi$}
+		coordinate (O);
+% -A
+	\draw [thick] (-0.9, 0.05) -- (-0.9, -0.05)
+		node [below=-2pt] {$\scriptstyle -A$}
+		coordinate (-A);
+% +A
+	\draw [thick] (+0.9, 0.05) -- (+0.9, -0.05)
+		node [below=-2pt] {$\scriptstyle +A$}
+		coordinate (+A);
+% Massa
+	\filldraw [black] (-0.5, 0) circle (1pt)
+		node [black, above] {$\scriptstyle m$}
+		coordinate (m);
+% Velocita'
+	\draw [black] [->] (m) -- ++(0.4, 0) node [above=-1pt, near end] {$\scriptstyle \vec v(t)$};
+\end{tikzpicture}

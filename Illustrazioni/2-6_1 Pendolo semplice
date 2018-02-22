@@ -1,0 +1,26 @@
+\begin{tikzpicture} [scale=1.5]
+% Origine
+	\coordinate (O) at (0,1.8);
+% Vincolo
+	\fill [pattern = north east lines] (-0.2, 2) rectangle (0.2, 1.8);
+	\draw[thick] (-0.2, 1.8) -- (0.2, 1.8);
+% Massa
+	\filldraw [black] (0.5, 0.6) circle (1pt)
+		node [black, right] {$\scriptstyle m$}
+		coordinate (m);
+% Fune
+	\draw (O) -- (m);
+% Riposo
+	\draw [color=gray, dashed] (O) -- (0, 0.4);
+% Theta
+	\filldraw[fill=gray!20!white,draw=black] (O) -- ++(0, -0.3)
+		arc [start angle=-90, end angle=-69, radius=3mm]
+		node [left=2pt] {$\scriptscriptstyle \theta$};
+% Gravita'
+	\draw [->] (m) -- ++(0, -0.3) node [below=-3pt] {$\scriptstyle \vec g$};
+% Tensione
+	\draw [black] [->] (m) -- ($(m)!0.3!(O)$) node [left, midway] {$\scriptstyle \vec T$};
+% Lunghezza
+	\draw [decorate, decoration={brace, amplitude=6pt}] (O) -- (m)
+		node [midway, right=3pt] {$\scriptstyle L$};
+\end{tikzpicture}

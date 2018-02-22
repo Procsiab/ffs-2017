@@ -1,0 +1,16 @@
+\begin{tikzpicture} [scale=0.8]
+% Riferimento originale
+	\draw [gray, dashed] [->] (-1, 0) -- (3, 0)
+		node [black, very near end, below] {$x$};
+	\draw [gray, dashed] [->] (0, -1) -- (0, 3)
+		node [black, very near end, left] {$y$};
+	\filldraw [black] (0, 0) circle (1pt)
+		node [black, below right=-3pt] {$\scriptscriptstyle(0, 0)$};
+% Riferimento traslato
+	\draw [dashed] [->] (0, 1) -- (4, 1)
+		node [very near end, below] {$x'$};
+	\draw [dashed] [->] (1, 0) -- (1, 4)
+		node [very near end, left] {$y'$};
+	\filldraw (1, 1) circle (1pt)
+		node [below right=-3pt] {$\scriptscriptstyle(x', y')$};
+\end{tikzpicture}
