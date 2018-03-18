@@ -5945,13 +5945,13 @@ Molle e fili
 \end_layout
 
 \begin_layout Subsection
-Forza di Hook
+Legge di Hooke
 \end_layout
 
 \begin_layout Standard
 Un corpo che deformandosi sviluppa una forza resistente si chiama corpo
  elastico: la molla ne è un rappresentante e tale forza viene definita con
- la legge di Hook:
+ la legge di Hooke:
 \end_layout
 
 \begin_layout Standard
@@ -5992,12 +5992,12 @@ bigskip
 status collapsed
 
 \begin_layout Plain Layout
-Hook, legge
+Hooke, legge
 \end_layout
 
 \end_inset
 
-Legge di Hook
+Legge di Hooke
 \end_layout
 
 \end_inset
@@ -11968,8 +11968,8 @@ dove
 
  sono le condizioni cinematiche iniziali; la soluzione può essere scritta
  anche con la funzione coseno.
- Come osservato nelle forze di Hook la forza è minima ai bordi dell'oscillazione
- e massima al centro di essa; il modo in cui sono in relazione velocità,
+ Come osservato nelle forze di Hooke la forza è minima ai bordi dell'oscillazion
+e e massima al centro di essa; il modo in cui sono in relazione velocità,
  accelerazione e posizione è una caratteristica del moto armonico.
 \end_layout
 
@@ -12213,7 +12213,7 @@ Sia la soluzione dell'equazione di un oscillatore
 \begin_inset Formula $x\left(t\right)=A\sin\left(\omega t+\phi\right)$
 \end_inset
 
-: essendo la forza di Hook un rappresentante di un oscillatore ed essendo
+: essendo la legge di Hooke un rappresentante di un oscillatore ed essendo
  conservativa, possiamo supporre che l'energia meccanica si conservi
 \begin_inset Formula 
 \[
